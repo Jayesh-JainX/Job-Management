@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #7E3AF2;
+  --secondary-color: #00A3FF;
+  --background-color: #F9FAFB;
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-primary);
+}
+
+@layer components {
+  .input-field {
+    @apply w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white px-6 py-2 rounded-lg hover:bg-secondary/90 transition-colors;
+  }
+
+  .card {
+    @apply bg-white p-6 rounded-lg shadow-sm;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+
+  .form-input {
+    @apply w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20;
+  }
+
+  .form-select {
+    @apply w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 appearance-none bg-white;
+  }
+
+  .form-textarea {
+    @apply w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20;
+  }
+
+  .error-message {
+    @apply text-red-500 text-sm;
+  }
+}
+
+/* Custom range input styles */
+input[type='range'] {
+  -webkit-appearance: none;
+  @apply w-full h-2 bg-gray-200 rounded-lg cursor-pointer;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  @apply w-4 h-4 bg-secondary rounded-full cursor-pointer;
+}
+
+input[type='range']::-moz-range-thumb {
+  @apply w-4 h-4 bg-secondary border-0 rounded-full cursor-pointer;
+}
+
+/* Custom select styles */
+select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
