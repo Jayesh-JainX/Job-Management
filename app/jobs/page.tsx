@@ -23,7 +23,7 @@ import { formatDistanceToNow, parseISO } from 'date-fns';
 
 const jobTypes: JobType[] = ['Full-time', 'Part-time', 'Contract', 'Internship'];
 
-export function JobsPage() {
+export default function JobsPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [location, setLocation] = useState('');
